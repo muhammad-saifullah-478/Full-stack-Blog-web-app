@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Company Header</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                background-color: #0d47a1;
+                color: #fff;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            nav {
+                display: flex;
+                gap: 20px;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+            nav a:hover {
+                color: #ffcc00;
+            }
+
+            .header-btn {
+                background-color: #ff0000;
+                color: #0d47a1;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .header-btn:hover {
+                background-color: #f43900;
+            }
+
+            @media (max-width: 768px) {
+                nav {
+                    display: none;
+                    /* Hide on small screens or use hamburger later */
+                }
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            .hero {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 60px;
+                background-color: #f0f4f8;
+                flex-wrap: wrap;
+            }
+
+            .hero-image {
+                flex: 1;
+                padding: 20px;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 15px;
+            }
+
+            .hero-content {
+                flex: 1;
+                padding: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+                color: #555;
+                margin-bottom: 30px;
+            }
+
+            .hero-content button {
+                padding: 12px 24px;
+                font-size: 16px;
+                background-color: #0066ff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            /* Slider container */
+            .slider-container {
+                width: 300%;
+                animation: slide 15s infinite;
+            }
+
+            /* Individual slide */
+            .slide {
+                width: 33.333%;
+                float: left;
+            }
+
+            /* Animation keyframes */
+            @keyframes slide {
+
+                0%,
+                28% {
+                    transform: translateX(0);
+                }
+
+                33%,
+                61% {
+                    transform: translateX(-33.333%);
+                }
+
+                66%,
+                94% {
+                    transform: translateX(-66.667%);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            /* Indicator styling */
+            .slider-dot:checked+.dot-label {
+                background-color: white;
+                opacity: 1;
+            }
+
+            /* Hide radio buttons */
+            .slider-radio {
+                display: none;
+            }
+
+            /* Navigation arrows hover effect */
+            .nav-arrow {
+                transition: background-color 0.3s;
+            }
+
+            .hero-content button:hover {
+                background-color: #004bcc;
+            }
+
+            @media (max-width: 768px) {
+                .hero {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+
+
+    
+    <header>
+        <div class="logo">Kasana Tech</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Blog</a>
+        </nav> 
+        <a class="header-btn" href="/logout">Logout</a>
+
+    </header>
+    <!-- <section class="relative w-full h-screen overflow-hidden">
+        <!-- Slider Container -->
+    <!-- <div class="slider-container flex h-full">
+            <!-- Slide 1 -->
+    <!-- <div class="slide relative w-full h-full bg-cover bg-center"
+                style="background-image: url('https://enterprisewired.com/wp-content/uploads/2024/02/2-Navigating-the-Future_-A-Comprehensive-Exploration-of-Emerging-Technologies.jpg')">
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Guide to Freelancing in Web</h1>
+                    <p class="text-lg md:text-xl mb-2">From Code to Clients – Your Guide to Freelancing in Web
+                        Development
+
+                        .</p>
+                    <p class="text-lg md:text-xl mb-6">Master Web Development and Start Freelancing Like a Pro.</p>
+                    <a href="#" class="px-6 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200">Read
+                        More</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+    <!-- <div class="slide relative w-full h-full bg-cover bg-center"
+                style="background-image: url('https://assets.weforum.org/article/image/JEjDMXSjECl1xPetf6XG6CvvSeD8X7GOVecXbYhsjGA.jpg')">
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">From AI to Web3</h1>
+                    <p class="text-lg md:text-xl mb-2">From AI to Web3 – We Decode Technology for You</p>
+                    <p class="text-lg md:text-xl mb-6">Coding, Cloud & Cybersecurity – One Blog, Endless Learning.</p>
+                    <a href="#" class="px-6 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200">Read
+                        More</a>
+                </div>
+            </div> -->
+    <!-- Slide 3 -->
+    <!-- <div class="slide relative w-full h-full bg-cover bg-center"
+                style="background-image: url('https://prd-sc102-cdn.rtx.com/-/media/rtx/our-company/what-we-do/transformative-technologies/2023-05/artificial-intelligence1.jpg?rev=b23e8eaa1f254b50b35d976be98cbb73')">
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Top Tools & Platforms</h1>
+                    <p class="text-lg md:text-xl mb-2">Top Tools & Platforms Every Freelance Web Developer Should Know.
+                    </p>
+                    <p class="text-lg md:text-xl mb-6">ech Skills That Pay – Turn Web Development into a Freelance
+                        Income.</p>
+                    <a href="#" class="px-6 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200">Read
+                        More</a>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- Navigation Arrows
+        <label for="slide1"
+            class="nav-arrow absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 cursor-pointer">❮</label>
+        <label for="slide2"
+            class="nav-arrow absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 cursor-pointer">❯</label> -->
+
+    <!-- Indicators -->
+    <!-- <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <input type="radio" name="slider" id="slide1" class="slider-radio" checked>
+            <label for="slide1" class="dot-label w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></label>
+            <input type="radio" name="slider" id="slide2" class="slider-radio">
+            <label for="slide2" class="dot-label w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></label>
+            <input type="radio" name="slider" id="slide3" class="slider-radio">
+            <label for="slide3" class="dot-label w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></label>
+        </div> -->
+    <!-- </section> -->
+    <!-- <section class="hero"> -->
+    <!-- <div class="hero-image">
+            <img src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/Towny-2-1-new.png"
+                alt="Web Development">
+        </div> -->
+    <!-- <div class="hero-content">
+            <h1>Grow Your Business<br>as a Web Developer</h1>
+            <p>Build powerful websites and online platforms that bring real results. Let’s scale your business
+                with smart web solutions.</p>
+            <button>Get Started</button>
+        </div>
+    </section> -->
+
+
+
+        <h1 class="mb-5 inline-block text-2xl mt-2 ml-[44px]">Edit Your old Post </h1>
+        <form method="post" action="/update/<%=post._id%>" class="ml-[44px]">
+            <textarea placeholder="Plese Enter Your Content"
+                class="p-4 p3 w-1/3 resize-none bg-green-300 block  border-zinc-800 rounded-md"
+                name="content"><%=post.content%></textarea>
+            <input class="px-3 w-40 py-2 bg-yellow-500 block rounded-md text-black mt-2 cursor-pointer " type="submit"
+                value="Update Post">
+        </form>
+       
+
+
+
+
+
+
+
+
+
+        </h1>
+</body>
+
+</html>

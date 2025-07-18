@@ -1,0 +1,99 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4e54c8, #8f94fb);
+      height: 100vh;
+      background-color: #3b40a4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"],
+    .signup-container input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4e54c8;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-container button:hover {
+      background-color: #3b40a4;
+    }
+
+    .signup-container p {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .signup-container p a {
+      color: #4e54c8;
+      text-decoration: none;
+    }
+
+    .signup-container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Account</h2>
+    <form action="/register" method="post">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="username" name="username" />
+      <input type="number" placeholder="age" name="age" />
+      <input type="email" placeholder="email" name="email" />
+      <input type="password" placeholder="password" name="password" />
+      <button type="submit" >Sign Up</button>
+      <p>Already have an account? <a href="#">Login</a></p>
+    </form>
+ 
+</body>
+</html>
+
+
+</html>
